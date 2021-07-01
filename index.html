@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>FAMILY BOOK</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>MY FAMILY BOOK</h1>
+        <img src="family.png" id="family_image" style="width: 30%;height: 60%;">
+        <h2 id="family_name">FAMILY BOOK</h2>
+        <h3 id="about">A Family is a group of people who are related to each other</h3>
+        <button onclick="update()">NEXT</button>
+    </body>
+    <script>
+        var images = ["family.png","mother.jpg","father.jpg","esister.jpg","ysister.jpg","me.jpg","gfather.png","gmother.jpg"];
+        var names = ["Family Book","Sonia Jain","Deepak Jain","Pari Jain","Vyara Jain","Aashi Jain","Inder Sain Jain","Gunmala Jain"];
+        var about = ["A Family is a group of people who are related to each other","Mother","Father","Elder sister","Younger Sister","Myself","Grandfather","Grandmother"];
+
+        var i=0;
+        function update()
+        {
+            i++;
+            var no_of_family_member_in_array= 7
+            if(i > no_of_family_member_in_array)
+            {
+                i = 0;
+            }
+            var updatedimg = images[i];
+            var updatedname = names[i];
+            var updatedabout = about[i];
+            document.getElementById("family_image").src = updatedimg;
+            document.getElementById("family_name").innerHTML=updatedname;
+            document.getElementById("about").innerHTML=updatedabout;
+        }
+    </script>
+</html>
